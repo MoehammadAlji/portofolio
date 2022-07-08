@@ -32,6 +32,9 @@ body {
     padding: 22px 56px;
 
 }
+.side-bar .main .list-item{
+    margin: 10px 0px;
+}
 
 .side-bar .main .list-item .description {
     border-radius: 4px;
@@ -138,27 +141,25 @@ body {
     top: 112px;
     /* background-color: blue; */
     justify-content: space-between;
+    margin-bottom: 44px;
+    align-items: center;
 }
-
 
 
 .content {
     display: flex;
-    flex-direction: column;
     align-items: center;
-    padding: 0px 0px 20px;
-    gap: 20px;
+    padding: 0px 0px 0px;
+    gap: 56px;
     position: absolute;
-    width: 492px;
-    height: 624px;
     left: 337px;
     top: 184px;
 }
 
-/* .article {
-    width: 452px;
-    height: 294px;
-} */
+.article {
+    width: 492px;
+    height: 624px;
+}
 
 .content .article header {
     display: flex;
@@ -167,10 +168,6 @@ body {
 
 .content .description {
     padding: 20px;
-}
-
-.content .article .description p {
-    margin-bottom: 16px;
 }
 
 /* .content .article img {
@@ -185,14 +182,16 @@ body {
     font-weight: 600;
     font-size: 16px;
     line-height: 22px;
+    /* padding: 0; */
 }
 
-.content .article .description p {
+.content .article p {
     margin-top: 16px;
     color: #808080;
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
+    margin-bottom: 20px;
 }
 
 .genre ul {
@@ -280,4 +279,10 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
+    color: #085473;
+}
+
+.genre-tool ul .sub-genre-tool {
+    width: 110px;
+
 }
