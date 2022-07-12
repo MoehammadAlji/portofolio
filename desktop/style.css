@@ -2,14 +2,16 @@
     font-family: 'Plus Jakarta Sans', sans-serif;
     padding: 0;
     margin: 0;
+
 }
 
 body {
     font-family: 'Plus Jakarta Sans', sans-serif;
+    position: relative;
 }
 
 .container {
-    min-height: 1894px;
+    height: 1894px;
     display: flex;
 }
 
@@ -26,13 +28,14 @@ body {
 
 .main-content {
     background-color: white;
-    /* flex-grow: 1; */
-    /* height: 100vh; */
-    /* width: 1152px; */
     padding: 22px 56px;
-
 }
-.side-bar .main .list-item{
+
+.logomenu {
+    display: none;
+}
+
+.side-bar .main .list-item {
     margin: 10px 0px;
 }
 
@@ -48,6 +51,10 @@ body {
     border-radius: 4px;
 }
 
+.side-bar-mobile {
+    display: none;
+}
+
 .list-item a {
     display: flex;
     text-decoration: none;
@@ -57,6 +64,11 @@ body {
 
 .header .list-item-logo a img {
     margin-bottom: 100px;
+}
+
+.list-item-logo a {
+    display: flex;
+    justify-content: center;
 }
 
 .list-item-portofolio a {
@@ -131,51 +143,63 @@ body {
     color: #212322;
 }
 
+.main-content .portofolio-header h1 {
+    font-family: 'Plus Jakarta Sans';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 60px;
+}
+
 
 .container-daftar-project {
     display: flex;
-    position: absolute;
-    width: 1012px;
     height: 32px;
-    left: 344px;
-    top: 112px;
+    /* left: 344px;
+    top: 112px; */
     /* background-color: blue; */
     justify-content: space-between;
     margin-bottom: 44px;
     align-items: center;
 }
 
+.container-daftar-project h2 {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 26px;
+}
 
 .content {
     display: flex;
-    align-items: center;
     padding: 0px 0px 0px;
     gap: 56px;
-    position: absolute;
-    left: 337px;
-    top: 184px;
+    /* justify-content: center; */
+    /* text-align: center; */
 }
 
-.article {
+.content .article {
     width: 492px;
-    height: 624px;
 }
+
+.content .article #gambar {
+    width: 100%;
+}
+
 
 .content .article header {
     display: flex;
     justify-content: space-between;
 }
 
+.content .article header h3 {
+    width: 224px;
+}
+
 .content .description {
     padding: 20px;
 }
-
-/* .content .article img {
-    position: absolute;
-    width: 478px;
-    height: 290.68px;
-
-} */
 
 .content .article h3 {
     color: #212322;
@@ -201,7 +225,6 @@ body {
     font-weight: 400;
     font-size: 12px;
     line-height: 16px;
-
 }
 
 .genre ul li {
@@ -285,4 +308,130 @@ body {
 .genre-tool ul .sub-genre-tool {
     width: 110px;
 
+}
+
+
+
+
+@media (max-width: 768px) {
+
+    .logomenu {
+        display: flex;
+        justify-content: space-between;
+        padding: 16px 24px;
+
+    }
+
+    .logomenu.click {
+        right: 360px;
+    }
+
+    .logomenu img {
+        cursor: pointer;
+        transition: left 0.4s ease;
+    }
+
+    .side-bar {
+        display: none;
+
+    }
+
+    .container {
+        display: block;
+    }
+
+    .main-content .portofolio-header h1 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 28px;
+        line-height: 36px;
+        margin-bottom: 24px;
+
+    }
+
+    .main-content {
+        background-color: white;
+        padding: 20px 24px;
+    }
+
+    .content {
+        display: block;
+    }
+
+    .content .article {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+
+    /* .content .article {
+        height: 624px;
+    } */
+
+    .genre ul {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 12px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16px;
+        flex-wrap: wrap;
+        width: 264px;
+
+    }
+
+    .side-bar-mobile {
+        background-color: #212322;
+        width: 288px;
+        display: flex;
+        box-sizing: border-box;
+        flex-direction: column;
+        padding: 23px 32px 30px 32px;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+        transform: translateX(0%);
+        transition: all 300ms ease-in-out;
+    }
+
+    .side-bar-mobile-toggle {
+        transform: translateX(100%);
+    }
+    
+    .side-bar-mobile .header {
+        padding-bottom: 8px;
+    }
+
+    .side-bar-mobile .main {
+        position: relative;
+        overflow-y: scroll;
+    }
+
+    .side-bar-mobile .main::-webkit-scrollbar {
+        display: none;
+    }
+
+    .side-bar-mobile .main .list-item {
+        margin: 10px 0px;
+    }
+
+    .list-item-logo {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .list-item-logo img {
+        cursor: pointer;
+    }
+
+    .description-header {
+        color: #FFFFFF;
+        font-weight: 600;
+        font-size: 17px;
+        line-height: 22px;
+    }
+
+    /* .genre{
+    } */
 }
