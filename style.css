@@ -29,6 +29,7 @@ body {
 .main-content {
     background-color: white;
     padding: 22px 56px;
+    /* width: 1440px; */
 }
 
 .logomenu {
@@ -365,7 +366,6 @@ body {
 
     .content .article {
         margin-bottom: 40px;
-        width: 100%;
     }
 
     /* .content .article {
